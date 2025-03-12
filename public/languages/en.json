@@ -1,0 +1,23 @@
+{
+	"auth": {
+		"register": {
+			"heading": "Register to TeaStream",
+			"backButtonLabel": "Already have an account? Login here",
+			"usernameLabel": "Username",
+			"usernameDescription": "This is how other users will see you.",
+			"emailLabel": "Email",
+			"emailDescription": "We may use your email to send you important account related messages",
+			"passwordLabel": "Password",
+			"passwordDescription": "Password must be at least 8 characters long",
+			"submitButton": "Create Account",
+			"successAlertTitle": "Check your email",
+			"successAlertDescription": "A confirmation email has been sent to your email address. If you don't see it, check your spam folder",
+			"errorMessage": "Unexpected error occurred during registration"
+		},
+		"verify": {
+      "heading": "Verify your account",
+			"successMessage": "Account successfully verified",
+			"errorMessage": "Error verifying account"
+		}
+	}
+}
