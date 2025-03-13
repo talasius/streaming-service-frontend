@@ -6,18 +6,53 @@
 			"usernameLabel": "Username",
 			"usernameDescription": "This is how other users will see you.",
 			"emailLabel": "Email",
-			"emailDescription": "We may use your email to send you important account related messages",
+			"emailDescription": "We may use your email to send you important account related messages.",
 			"passwordLabel": "Password",
-			"passwordDescription": "Password must be at least 8 characters long",
+			"passwordDescription": "Password must be at least 8 characters long.",
 			"submitButton": "Create Account",
 			"successAlertTitle": "Check your email",
-			"successAlertDescription": "A confirmation email has been sent to your email address. If you don't see it, check your spam folder",
+			"successAlertDescription": "A confirmation email has been sent to your email address. If you don't see it, check your spam folder.",
 			"errorMessage": "Unexpected error occurred during registration"
 		},
 		"verify": {
-      "heading": "Verify your account",
+			"heading": "Verify your account",
 			"successMessage": "Account successfully verified",
 			"errorMessage": "Error verifying account"
+		},
+		"login": {
+			"heading": "Login to TeaStream",
+			"backButtonLabel": "No account? Register here",
+			"loginLabel": "Login",
+			"loginDescription": "Your username or email you used during registration.",
+			"passwordLabel": "Password",
+			"passwordDescription": "Password you used during registration.",
+			"pinLabel": "6-digit code",
+			"pinDescription": "Enter the code from your authenticator app.",
+			"forgotPassword": "Forgot password?",
+			"submitButton": "Login",
+			"successMessage": "You have successfully logged in!",
+			"errorMessage": "Invalid login or password"
+		},
+		"resetPassword": {
+			"heading": "Password reset",
+			"backButtonLabel": "Already have an account? Login here",
+			"emailLabel": "Email",
+			"emailDescription": "Email you used during registration.",
+			"submitButton": "Reset Password",
+			"successAlertTitle": "Reset link sent",
+			"successAlertDescription": "We have sent a password reset link to your email. If you have Telegram notification enabled, it was also sent there.",
+			"errorMessage": "Unexpected error occurred during password reset"
+		},
+		"newPassword": {
+			"heading": "New password",
+			"backButtonLabel": "Already have an account? Login here",
+			"passwordLabel": "New password",
+			"passwordDescription": "Create a new password. Password must be at least 8 characters long.",
+			"passwordRepeatLabel": "Repeat password",
+			"passwordRepeatDescription": "Repeat your password for confirmation.",
+			"submitButton": "Set new password",
+			"successMessage": "New password successfully set",
+			"errorMessage": "Unexpected error occurred during password reset"
 		}
 	}
 }

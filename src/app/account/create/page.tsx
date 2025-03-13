@@ -14,6 +14,6 @@ export async function generateMetadata(): Promise<Metadata> {
 	};
 }
 
-export default function Page({ className }: Props) {
+export default function CreateAccountPage({ className }: Props) {
 	return <CreateAccountForm />;
 }

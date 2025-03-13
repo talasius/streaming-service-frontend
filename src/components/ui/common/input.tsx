@@ -1,4 +1,4 @@
-import { cn } from '@/utils/tw-merge';
+import { cn } from '@/utils';
 import * as React from 'react';
 
 function Input({ className, type, ...props }: React.ComponentProps<'input'>) {

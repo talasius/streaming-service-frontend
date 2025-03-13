@@ -1,30 +1,31 @@
 'use client';
 
 import {
-	Alert,
-	AlertDescription,
-	AlertTitle,
-	Button,
-	Form,
-	FormControl,
-	FormDescription,
-	FormField,
-	FormItem,
-	FormLabel,
-	Input,
+  Alert,
+  AlertDescription,
+  AlertTitle,
+  Button,
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  Input,
 } from '@/components/ui/common';
+import { PAGES } from '@/config/pages-url.config';
 import { useCreateUserMutation } from '@/graphql/generated/output';
 import {
-	createAccountSchema,
-	TCreateAccountSchema,
+  createAccountSchema,
+  type TCreateAccountSchema,
 } from '@/schemas/auth/create-account.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { CircleCheck } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { AuthWrapper } from '../AuthWrapper';
-import { CircleCheck } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 export function CreateAccountForm() {
 	const t = useTranslations('auth.register');
@@ -39,9 +40,9 @@ export function CreateAccountForm() {
 	});
 
 	const [create, { loading: isCreating }] = useCreateUserMutation({
-		errorPolicy: 'all',
 		onCompleted() {
 			setIsSuccess(true);
+			form.reset();
 		},
 		onError({ graphQLErrors }) {
 			if (graphQLErrors) {
@@ -64,7 +65,7 @@ export function CreateAccountForm() {
 		<AuthWrapper
 			heading={t('heading')}
 			backButtonLabel={t('backButtonLabel')}
-			backButtonHref='/account/login'>
+			backButtonHref={PAGES.LOGIN}>
 			{isSuccess ? (
 				<Alert>
 					<CircleCheck size={4} />
@@ -86,7 +87,8 @@ export function CreateAccountForm() {
 										<Input
 											placeholder='johndoe'
 											disabled={isCreating}
-											{...field}></Input>
+											{...field}
+										/>
 									</FormControl>
 									<FormDescription>{t('usernameDescription')}</FormDescription>
 								</FormItem>
@@ -102,7 +104,8 @@ export function CreateAccountForm() {
 										<Input
 											placeholder='example@example.com'
 											disabled={isCreating}
-											{...field}></Input>
+											{...field}
+										/>
 									</FormControl>
 									<FormDescription>{t('emailDescription')}</FormDescription>
 								</FormItem>
@@ -119,7 +122,8 @@ export function CreateAccountForm() {
 											placeholder='********'
 											type='password'
 											disabled={isCreating}
-											{...field}></Input>
+											{...field}
+										/>
 									</FormControl>
 									<FormDescription>{t('passwordDescription')}</FormDescription>
 								</FormItem>
