@@ -1,7 +1,8 @@
+import { PAGES } from '@/config/pages-url.config';
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 
 const httpLink = createHttpLink({
-	uri: process.env.NEXT_PUBLIC_SERVER_URL,
+	uri: PAGES.SERVER_URL,
 	credentials: 'include',
 });
 

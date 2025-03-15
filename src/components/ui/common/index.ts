@@ -1,9 +1,14 @@
 export * from './alert.tsx';
+export * from './avatar.tsx';
 export * from './button.tsx';
 export * from './card.tsx';
+export * from './dropdown-menu.tsx';
 export * from './form.tsx';
+export * from './input-otp.tsx';
 export * from './input.tsx';
 export * from './label.tsx';
+export * from './popover.tsx';
 export * from './select.tsx';
-export * from './input-otp.tsx';
+export * from './separator.tsx';
+export * from './tooltip.tsx';
 

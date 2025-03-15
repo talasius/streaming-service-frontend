@@ -1,4 +1,53 @@
 {
+	"layout": {
+		"logo": {
+			"platform": "Платформа для стримов"
+		},
+		"headerMenu": {
+			"login": "Войти",
+			"register": "Регистрация",
+			"profileMenu": {
+        "notifications": {
+          "heading": "Уведомления",
+          "loading": "Загрузка...",
+          "empty": "У вас нет новых уведомлений"
+        },
+				"channel": "Мой канал",
+				"dashboard": "Панель управления",
+				"logout": "Выйти",
+				"successMessage": "Вы успешно вышли из аккаунта",
+				"errorMessage": "Ошибка при выходе из аккаунта"
+			}
+		},
+		"search": {
+			"placeholder": "Поиск"
+		},
+		"dashboardNav": {
+			"settings": "Настройки",
+			"streamSettings": "Настройки стрима",
+			"keys": "Ключи для стрима",
+			"chatSettings": "Настройки чата",
+			"followers": "Подписчики",
+			"sponsors": "Спонсоры",
+			"premium": "Премиум планы",
+			"transactions": "Платежи"
+		},
+		"sidebarHeader": {
+			"expand": "Развернуть",
+			"collapse": "Свернуть",
+			"navigation": "Навигация",
+			"forYou": "Для вас"
+		},
+		"userNav": {
+			"home": "Главная",
+			"categories": "Категории",
+			"streams": "Стримы",
+			"recommended": "Рекомендации"
+		},
+		"recommended": {
+			"heading": "Рекомендации"
+		}
+	},
 	"auth": {
 		"register": {
 			"heading": "Регистрация в TeaStream",
