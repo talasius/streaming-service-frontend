@@ -1,0 +1,15 @@
+query FindRecommendedChannels {
+	findRecommmendedChannels {
+		username
+		displayName
+		avatar
+		isVerified
+		stream {
+			category {
+				title
+			}
+      title
+			isLive
+		}
+	}
+}

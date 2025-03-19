@@ -20,7 +20,7 @@ import { toast } from 'sonner';
 import { Notifications } from './notifications/Notifications';
 
 export function ProfileMenu() {
-	const t = useTranslations('layout.headerMenu.profileMenu');
+	const t = useTranslations('layout.header.headerMenu.profileMenu');
 	const { push } = useRouter();
 
 	const { exit } = useAuth();

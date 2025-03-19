@@ -19,11 +19,12 @@ const avatarSizes = cva('', {
 interface Props extends VariantProps<typeof avatarSizes> {
 	channel: Pick<FindProfileQuery['findProfile'], 'username' | 'avatar'>;
 	isLive?: boolean;
+	className?: string;
 }
 
-export function ChannelAvatar({ channel, isLive, size }: Props) {
+export function ChannelAvatar({ channel, isLive, size, className }: Props) {
 	return (
-		<div className='relative'>
+		<div className={cn('relative', className)}>
 			<Avatar className={cn(avatarSizes({ size }), isLive && 'ring-2 ring-rose-500')}>
 				<AvatarImage
 					src={getMediaSource(channel.avatar)}

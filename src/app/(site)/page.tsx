@@ -1,6 +1,5 @@
 'use client';
 
-import { ChannelAvatar } from '@/components/ui/elements/ChannelAvatar';
 import { useCurrent } from '@/hooks/useCurrent';
 
 export default function Home() {
@@ -8,7 +7,11 @@ export default function Home() {
 
 	return (
 		<div className='font-bold'>
-			{isProfileLoading ? <div>Loading...</div> : <>{JSON.stringify(user)}</>}
+			{isProfileLoading ? (
+				<div>Loading...</div>
+			) : (
+				<>{JSON.stringify(user?.displayName)} is cool</>
+			)}
 		</div>
 	);
 }

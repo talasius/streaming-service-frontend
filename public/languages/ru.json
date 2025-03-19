@@ -1,51 +1,58 @@
 {
 	"layout": {
-		"logo": {
-			"platform": "Платформа для стримов"
-		},
-		"headerMenu": {
-			"login": "Войти",
-			"register": "Регистрация",
-			"profileMenu": {
-        "notifications": {
-          "heading": "Уведомления",
-          "loading": "Загрузка...",
-          "empty": "У вас нет новых уведомлений"
-        },
-				"channel": "Мой канал",
-				"dashboard": "Панель управления",
-				"logout": "Выйти",
-				"successMessage": "Вы успешно вышли из аккаунта",
-				"errorMessage": "Ошибка при выходе из аккаунта"
+		"header": {
+			"logo": {
+				"platform": "Платформа для стримов"
+			},
+			"search": {
+				"placeholder": "Поиск"
+			},
+			"headerMenu": {
+				"login": "Войти",
+				"register": "Регистрация",
+				"profileMenu": {
+					"notifications": {
+						"heading": "Уведомления",
+						"loading": "Загрузка...",
+						"empty": "У вас нет новых уведомлений"
+					},
+					"channel": "Мой канал",
+					"dashboard": "Панель управления",
+					"logout": "Выйти",
+					"successMessage": "Вы успешно вышли из аккаунта",
+					"errorMessage": "Ошибка при выходе из аккаунта"
+				}
 			}
 		},
-		"search": {
-			"placeholder": "Поиск"
-		},
-		"dashboardNav": {
-			"settings": "Настройки",
-			"streamSettings": "Настройки стрима",
-			"keys": "Ключи для стрима",
-			"chatSettings": "Настройки чата",
-			"followers": "Подписчики",
-			"sponsors": "Спонсоры",
-			"premium": "Премиум планы",
-			"transactions": "Платежи"
-		},
-		"sidebarHeader": {
-			"expand": "Развернуть",
-			"collapse": "Свернуть",
-			"navigation": "Навигация",
-			"forYou": "Для вас"
-		},
-		"userNav": {
-			"home": "Главная",
-			"categories": "Категории",
-			"streams": "Стримы",
-			"recommended": "Рекомендации"
-		},
-		"recommended": {
-			"heading": "Рекомендации"
+		"sidebar": {
+			"header": {
+				"expand": "Развернуть",
+				"collapse": "Свернуть",
+				"navigation": "Навигация",
+				"forYou": "Для вас"
+			},
+			"userNav": {
+				"home": "Главная",
+				"categories": "Категории",
+				"streams": "Стримы",
+				"recommended": "Рекомендации"
+			},
+			"liveFollowing": {
+				"heading": "Ваши подписки"
+			},
+			"recommended": {
+				"heading": "Рекомендации"
+			},
+			"dashboardNav": {
+				"settings": "Настройки",
+				"streamSettings": "Настройки стрима",
+				"keys": "Ключи для стрима",
+				"chatSettings": "Настройки чата",
+				"followers": "Подписчики",
+				"sponsors": "Спонсоры",
+				"premium": "Премиум планы",
+				"transactions": "Платежи"
+			}
 		}
 	},
 	"auth": {
@@ -102,6 +109,22 @@
 			"submitButton": "Установить пароль",
 			"successMessage": "Пароль успешно изменен",
 			"errorMessage": "Ошибка при изменении пароля"
+		}
+	},
+  "dashboard": {
+    "settings": {
+      "heading": "Настройки",
+      "description": "Здесь вы можете изменить настройки вашего аккаунта",
+      "profile": "Профиль",
+      "account": "Аккаунт",
+      "appearance": "Внешний вид",
+      "notifications": "Уведомления",
+      "sessions": "Сессии"
+    }
+  },
+	"components": {
+		"liveBadge": {
+			"text": "В ЭФИРЕ"
 		}
 	}
 }

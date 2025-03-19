@@ -10,5 +10,6 @@ export * from './label.tsx';
 export * from './popover.tsx';
 export * from './select.tsx';
 export * from './separator.tsx';
+export * from './tabs.tsx';
 export * from './tooltip.tsx';
 

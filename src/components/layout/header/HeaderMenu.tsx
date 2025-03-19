@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { ProfileMenu } from './ProfileMenu';
 
 export function HeaderMenu() {
-	const t = useTranslations('layout.headerMenu');
+	const t = useTranslations('layout.header.headerMenu');
 	const { isAuthenticated } = useAuth();
 
 	return (

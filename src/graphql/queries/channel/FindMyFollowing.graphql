@@ -1,0 +1,17 @@
+query FindMyFollowing {
+	findMyFollowing {
+		following {
+			displayName
+			username
+			avatar
+			isVerified
+			stream {
+				category {
+					title
+				}
+        title
+				isLive
+			}
+		}
+	}
+}

@@ -1,18 +1,25 @@
 class PAGES_CONFIG {
 	private readonly home = '/';
 	private readonly auth = '/account';
-	private readonly root = '/dashboard';
+	private readonly dashboard = '/dashboard';
 	private readonly streams = '/streams';
 
 	public HOME = this.home;
+  public CATEGORIES = `${this.home}/categories`
 
 	public ACCOUNT = this.auth;
 	public LOGIN = `${this.auth}/login`;
 	public REGISTER = `${this.auth}/create`;
 	public FORGOT_PASSWORD = `${this.auth}/recovery`;
 
-	public DASHBOARD = this.root;
-	public SETTINGS = `${this.root}/settings`;
+	public DASHBOARD = this.dashboard;
+	public SETTINGS = `${this.dashboard}/settings`;
+	public KEYS = `${this.dashboard}/keys`;
+	public CHAT = `${this.dashboard}/chat`;
+  public FOLLOWERS = `${this.dashboard}/followers`;
+  public SPONSORS = `${this.dashboard}/sponsors`;
+  public PLANS = `${this.dashboard}/plans`;
+  public TRANSACTIONS = `${this.dashboard}/transactions`;
 
 	public STREAMS = this.streams;
 
