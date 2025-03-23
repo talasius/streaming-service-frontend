@@ -5,7 +5,8 @@ import { useFindRecommendedChannelsQuery } from '@/graphql/generated/output';
 import { useSidebar } from '@/hooks/useSidebar';
 import { Video } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { ChannelItem } from './ChannelItem';
+import { ChannelItemSkeleton, ChannelItem } from './ChannelItem';
+import { Hint } from '@/components/ui/elements';
 
 export function RecommendedChannels() {
 	const t = useTranslations('layout.sidebar.recommended');
@@ -23,19 +24,22 @@ export function RecommendedChannels() {
 				</h2>
 			) : (
 				<div className='flex items-center justify-center'>
-					<Video className='mb-1' />
+					<Hint
+						label={t('hintLabel')}
+						side='right'
+						asChild>
+						<Video className='mb-1' />
+					</Hint>
 				</div>
 			)}
-			{isLoading ? (
-				<div>Loading....</div>
-			) : (
-				channels.map((channel, i) => (
-					<ChannelItem
-						key={i}
-						channel={channel}
-					/>
-				))
-			)}
+			{isLoading
+				? Array.from({ length: 7 }).map((_, i) => <ChannelItemSkeleton key={i} />)
+				: channels.map((channel, i) => (
+						<ChannelItem
+							key={i}
+							channel={channel}
+						/>
+				  ))}
 		</div>
 	);
 }

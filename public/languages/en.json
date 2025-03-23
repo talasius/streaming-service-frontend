@@ -38,10 +38,12 @@
 				"recommended": "Recommended"
 			},
 			"liveFollowing": {
-				"heading": "Followed channels"
+				"heading": "Followed channels",
+				"hintLabel": "Following"
 			},
 			"recommended": {
-				"heading": "Recommended"
+				"heading": "Recommended",
+				"hintLabel": "Recommended"
 			},
 			"dashboardNav": {
 				"settings": "Settings",
@@ -109,22 +111,160 @@
 			"submitButton": "Set new password",
 			"successMessage": "New password successfully set",
 			"errorMessage": "Unexpected error occurred during password reset"
+		},
+		"deactivate": {
+			"heading": "Deactivate Account",
+			"backButtonLabel": "Go back to profile page",
+			"emailLabel": "Email",
+			"emailDescription": "Your email you used during registration.",
+			"passwordLabel": "Password",
+			"passwordDescription": "Your account password.",
+      "pinLabel": "6-digit code",
+			"pinDescription": "A 6-digit code has been sent to your email. If you have enabled Telegram notifications, the code has also been sent there.",
+			"submitButton": "Deactivate account",
+			"successMessage": "You have successfully deactivated your account",
+			"errorMessage": "Unexpected error occurred while deactivating your account"
 		}
 	},
 	"dashboard": {
 		"settings": {
-			"heading": "Settings",
-			"description": "You can change your account settings here",
-			"profile": "Profile",
-			"account": "Account",
-			"appearance": "Appearance",
-			"notifications": "Notifications",
-			"sessions": "Sessions"
+			"header": {
+				"heading": "Settings",
+				"description": "You can change your account settings here",
+				"profile": "Profile",
+				"account": "Account",
+				"appearance": "Appearance",
+				"notifications": "Notifications",
+				"sessions": "Sessions"
+			},
+			"profile": {
+				"header": {
+					"heading": "Profile",
+					"description": "Customize your profile, update your avatar, change your personal information and add links to social networks to make your profile more attractive to other users."
+				},
+				"avatar": {
+					"heading": "Your profile picture",
+					"updateButton": "Update Avatar",
+					"confirmModal": {
+						"heading": "Remove avatar",
+						"message": "Are you sure you want to remove your profile picture? This action cannot be undone."
+					},
+					"info": "Supported formats: JPG, JPEG, PNG, WEBP or GIF. Max size: 10 MB",
+					"successfullUpdate": "Your avatar has been successfully updated!",
+					"successfullRemove": "Your avatar has been successfully removed!",
+					"errorUpdating": "Unexpected error occurred while updating your avatar. Please try again.",
+					"errorRemoving": "Unexpected error occurred while removing your avatar. Please try again."
+				},
+				"info": {
+					"heading": "Profile Settings",
+					"usernameLabel": "Username",
+					"usernamePlaceholder": "johndoe",
+					"usernameDescription": "This is how other users will see you.",
+					"displayNameLabel": "Display name",
+					"displayNamePlaceholder": "John Doe",
+					"displayNameDescription": "Your name that other users will see.",
+					"bioLabel": "About me",
+					"bioPlaceholder": "You can call me",
+					"bioDescription": "Teel us about yourself. Your bio cannot be longer than 300 characters.",
+					"submitButton": "Save Changes",
+					"successMessage": "Profile settings successfully updated!",
+					"errorMessage": "Unexpected error occurred while updating your profile. Please try again."
+				},
+				"socialLinks": {
+					"createForm": {
+						"heading": "Social Media Links",
+						"titleLabel": "Social Media",
+						"titlePlaceholder": "YouTube",
+						"titleDescription": "Text of the social media link.",
+						"urlLabel": "URL",
+						"urlPlaceholder": "https://teastream.ru/",
+						"urlDescription": "Where does this link lead? Enter the full URL, e.g. https://teastream.ru/",
+						"submitButton": "Add social link",
+						"successMessage": "Social link successfully added!",
+						"errorMessage": "Unexpected error occurred while adding a social link. Please try again."
+					},
+					"editForm": {
+						"cancelButton": "Cancel",
+						"submitButton": "Save",
+						"successUpdateMessage": "Social link successfully updated!",
+						"errorUpdateMessage": "Unexpected error occurred while updating a social link. Please try again.",
+						"successRemoveMessage": "Social link successfully removed!",
+						"errorRemoveMessage": "Unexpected error occurred while removing a social link. Please try again."
+					},
+					"successReorderMessage": "Social links order successfully updated!",
+					"errorReorderMessage": "Unexpected error occurred while updating social links order. Please try again."
+				}
+			},
+			"account": {
+				"header": {
+					"heading": "Account",
+					"description": "Manage your account settings, including changing access, security, and the ability to deactivate.",
+					"securityHeading": "Security",
+					"securityDescription": "Set up two-factor authentication for enhanced data protection.",
+					"deactivationHeading": "Deactivation",
+					"deactivationDescription": "If you want to temporarily or permanently disable your account, use this option. Please note the consequences."
+				},
+				"email": {
+					"heading": "Email",
+					"emailLabel": "New Email",
+					"emailDescription": "Enter your new email address. Make sure it is valid, as a confirmation email will be sent to it.",
+					"emailPlaceholder": "example@mail.com",
+					"submitButton": "Save",
+					"successMessage": "Email successfully updated!",
+					"errorMessage": "Unexpected error occurred while updating your email. Please try again."
+				},
+				"password": {
+					"heading": "Account password",
+					"oldPasswordLabel": "Old password",
+					"oldPasswordDescription": "Enter your old password to confirm your identity before changing the password. This is necessary to ensure the security of your account.",
+					"newPasswordLabel": "New password",
+					"newPasswordDescription": "Your new password must be at least 8 characters long. It is recommended to use special characters to increase the reliability of the password.",
+					"submitButton": "Save",
+					"successMessage": "Password successfully updated!",
+					"errorMessage": "Unexpected error occurred while updating your password. Please try again."
+				},
+				"twoFactor": {
+					"heading": "TOTP Authentication",
+					"description": "Increase the security of your account by enabling TOTP authentication. This additional layer of protection requires entering a unique code, which makes your account less vulnerable to unauthorized access.",
+					"enable": {
+						"trigger": "Enable",
+						"heading": "Enable TOTP",
+						"qrInstructions": "Scan the QR code to add TOTP",
+						"secretCodeLabel": "Secret code: ",
+						"secretCodeCopy": "Secret code copied to clipboard",
+						"pinLabel": "PIN code",
+						"pinDescription": "Please enter the 6-digit code that you can get in the authentication app.",
+						"submitButton": "Confirm",
+						"successMessage": "TOTP authentication successfully enabled!",
+						"errorMessage": "Unexpected error occurred while enabling TOTP authentication. Please try again."
+					},
+					"disable": {
+						"trigger": "Disable",
+						"heading": "Are you sure you want to disable TOTP?",
+						"message": "Disabling TOTP authentication will make your account less secure. Are you sure you want to continue?",
+						"successMessage": "TOTP authentication disabled",
+						"errorMessage": "Unexpected error occurred while disabling TOTP authentication. Please try again."
+					}
+				},
+				"deactivation": {
+					"heading": "Deactivate account",
+					"description": "After deactivating your account, you will not be able to log in. After 7 days, the account will be completely deleted. Until then, you can contact support to restore access and unlock your account.",
+					"confirmModal": {
+						"heading": "Confirm Deactivation",
+						"message": "Are you sure you want to deactivate your account? Access can only be restored within 7 days."
+					},
+					"deactivateButton": "Deactivate"
+				}
+			}
 		}
 	},
 	"components": {
 		"liveBadge": {
 			"text": "LIVE"
+		},
+		"confirmModal": {
+			"cancel": "Cancel",
+			"continue": "Confirm"
 		}
 	}
 }

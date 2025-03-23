@@ -27,17 +27,10 @@ export function VerifyAccountForm() {
 			toast.success(t('successMessage'));
 			push(PAGES.SETTINGS);
 		},
-		onError({ graphQLErrors }) {
-			if (graphQLErrors) {
-				graphQLErrors.map(({ message }) => {
-					toast.error(message);
-				});
-			} else {
-				toast.error(t('errorMessage'));
-			}
-
-			push(PAGES.REGISTER);
-		},
+		onError({graphQLErrors: [{message}]}) {
+      toast.error(message ?? t('errorMessage'))
+      push(PAGES.REGISTER)
+    },
 	});
 
 	React.useEffect(() => {

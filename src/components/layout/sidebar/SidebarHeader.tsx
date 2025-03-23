@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/common';
-import { Hint } from '@/components/ui/elements/Hint';
+import { Hint } from '@/components/ui/elements';
 import { PAGES } from '@/config/pages-url.config';
 import { useSidebar } from '@/hooks/useSidebar';
 import { ArrowLeftFromLine, ArrowRightFromLine } from 'lucide-react';

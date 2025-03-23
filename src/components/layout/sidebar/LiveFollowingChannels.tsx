@@ -4,8 +4,9 @@ import { Separator } from '@/components/ui/common';
 import { useFindMyFollowingQuery } from '@/graphql/generated/output';
 import { useSidebar } from '@/hooks/useSidebar';
 import { useTranslations } from 'next-intl';
-import { ChannelItem } from './ChannelItem';
+import { ChannelItem, ChannelItemSkeleton } from './ChannelItem';
 import { Heart } from 'lucide-react';
+import { Hint } from '@/components/ui/elements';
 
 export function LiveFollowingChannels() {
 	const t = useTranslations('layout.sidebar.liveFollowing');
@@ -34,7 +35,9 @@ export function LiveFollowingChannels() {
 						{t('heading')}
 					</h2>
 				)}
-				<div>Loading....</div>
+				{Array.from({ length: 7 }).map((_, i) => (
+					<ChannelItemSkeleton key={i} />
+				))}
 			</div>
 		);
 	}
@@ -48,7 +51,13 @@ export function LiveFollowingChannels() {
 				</h2>
 			) : (
 				<div className='flex items-center justify-center'>
+          <Hint
+            label={t('hintLabel')}
+            side='right'
+            asChild
+          >
 					<Heart className='mb-1' />
+          </Hint>
 				</div>
 			)}
 			{liveChannels.map((channel, i) => (

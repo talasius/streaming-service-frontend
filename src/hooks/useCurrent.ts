@@ -28,3 +28,6 @@ export function useCurrent() {
 		refetch,
 	};
 }
+
+export type TUseCurrent = ReturnType<typeof useCurrent>
+

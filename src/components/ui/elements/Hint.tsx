@@ -1,12 +1,7 @@
 import type { FindRecommendedChannelsQuery } from '@/graphql/generated/output';
 import { cn } from '@/utils';
 import React from 'react';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-} from '../common';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../common';
 import { LiveBadge } from './LiveBadge';
 
 interface Props {
@@ -36,7 +31,7 @@ export function Hint({
 				{type === 'card' ? (
 					<TooltipContent
 						className={cn(
-							'border border-border flex flex-col gap-y-2 w-fit backdrop-blur-sm light:bg-[#1f2128]/30 light:text-gray-800 light:border-zinc-400 dark:text-gray-300 dark:bg-gray-300/20',
+							'border border-border rounded-xl flex flex-col gap-y-2 w-fit shadow bg-white text-foreground dark:bg-card dark:shadow-black/20 dark:shadow-md',
 							className
 						)}
 						side={side}
@@ -56,13 +51,13 @@ export function Hint({
 						</p>
 						<div className='flex items-center gap-x-2'>
 							<LiveBadge size='sm' />
-							<p className='text-gray-400/70 text-sm'>Live</p>
+							<p className='text-gray-400/70 text-sm light:text-foreground'>Live</p>
 						</div>
 					</TooltipContent>
 				) : (
 					<TooltipContent
 						className={cn(
-							'border border-border backdrop-blur-sm light:bg-[#1f2128]/30 light:text-gray-800 light:border-zinc-400 dark:text-gray-300 dark:bg-gray-300/20',
+							'border border-border rounded-xl flex flex-col gap-y-2 w-fit shadow bg-white text-foreground dark:bg-card dark:shadow-black/20 dark:shadow-md',
 							className
 						)}
 						side={side}

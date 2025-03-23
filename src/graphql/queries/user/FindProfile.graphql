@@ -1,8 +1,11 @@
 query FindProfile {
 	findProfile {
+    id
 		username
 		displayName
+		bio
 		email
 		avatar
+    isTotpEnabled
 	}
 }

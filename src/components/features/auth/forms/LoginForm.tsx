@@ -55,17 +55,10 @@ export function LoginForm() {
 
 			form.reset();
 		},
-		onError({ graphQLErrors }) {
-			if (graphQLErrors) {
-				graphQLErrors.map(({ message }) => {
-					toast.error(message);
-				});
-			} else {
-				toast.error(t('errorMessage'));
-			}
-
-			form.reset();
-		},
+		onError({graphQLErrors: [{message}]}) {
+      toast.error(message ?? t('errorMessage'))
+      form.reset()
+    },
 	});
 
 	const { isValid } = form.formState;

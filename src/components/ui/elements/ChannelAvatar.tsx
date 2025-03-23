@@ -9,6 +9,7 @@ const avatarSizes = cva('', {
 			sm: 'size-7',
 			default: 'size-9',
 			lg: 'size-14',
+			xl: 'size-32',
 		},
 	},
 	defaultVariants: {
@@ -24,13 +25,20 @@ interface Props extends VariantProps<typeof avatarSizes> {
 
 export function ChannelAvatar({ channel, isLive, size, className }: Props) {
 	return (
-		<div className={cn('relative', className)}>
-			<Avatar className={cn(avatarSizes({ size }), isLive && 'ring-2 ring-rose-500')}>
+		<div className='relative'>
+			<Avatar
+				className={cn(
+					avatarSizes({ size }),
+					isLive && 'ring-2 ring-rose-500',
+					className
+				)}>
 				<AvatarImage
 					src={getMediaSource(channel.avatar)}
 					className='object-cover'
 				/>
-				<AvatarFallback>{channel.username.slice(0, 2).toUpperCase()}</AvatarFallback>
+				<AvatarFallback className={cn(size === 'xl' && 'text-4xl')}>
+					{channel.username.slice(0, 2).toUpperCase()}
+				</AvatarFallback>
 			</Avatar>
 		</div>
 	);

@@ -15,6 +15,8 @@ export function ToastProvider({ ...props }: ToasterProps) {
 			className='toaster group'
 			toastOptions={{
 				classNames: {
+          success: 'text-primary! border border-primary!',
+          error: 'text-red-600! border border-red-600!',
 					toast:
 						'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg',
 					description: 'group-[.toast]:text-muted-foreground',

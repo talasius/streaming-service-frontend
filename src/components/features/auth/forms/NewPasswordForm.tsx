@@ -42,15 +42,9 @@ export function NewPasswordForm() {
 			toast.success(t('successMessage'));
 			push(PAGES.LOGIN);
 		},
-		onError({ graphQLErrors }) {
-			if (graphQLErrors) {
-				graphQLErrors.map(({ message }) => {
-					toast.error(message);
-				});
-			} else {
-				toast.error(t('errorMessage'));
-			}
-		},
+		onError({graphQLErrors: [{message}]}) {
+      toast.error(message ?? t('errorMessage'))
+    },
 	});
 
 	const { isValid } = form.formState;
