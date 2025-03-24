@@ -33,3 +33,4 @@ class PAGES_CONFIG {
 }
 
 export const PAGES = new PAGES_CONFIG();
+

@@ -78,12 +78,16 @@ export function ProfileMenu() {
 						</DropdownMenuItem>
 					</Link>
 
-					<DropdownMenuItem onClick={() => logout()}>
+					<DropdownMenuItem
+						onClick={() => logout()}
+						className='group'>
 						<LogOut
 							size={16}
-							className='mr-2'
+							className='mr-2 group-hover:text-red-600 transition-colors duration-200 ease-in-out'
 						/>
-						{t('logout')}
+						<p className='group-hover:text-red-600 transition-colors duration-200 ease-in-out'>
+							{t('logout')}
+						</p>  
 					</DropdownMenuItem>
 				</DropdownMenuContent>
 			</DropdownMenu>

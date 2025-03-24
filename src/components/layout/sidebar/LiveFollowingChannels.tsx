@@ -14,17 +14,10 @@ export function LiveFollowingChannels() {
 
 	const { data, loading: isLoading } = useFindMyFollowingQuery();
 	const channels = data?.findMyFollowing ?? [];
+
 	const liveChannels = channels.filter((channel) => channel.following.stream.isLive);
 
-	if (liveChannels.length < 5) {
-		liveChannels.push(
-			...channels
-				.filter((channel) => !channel.following.stream.isLive)
-				.slice(0, 5 - liveChannels.length)
-		);
-	}
-
-	if (!liveChannels.length) return null;
+	if (!liveChannels) return null;
 
 	if (isLoading) {
 		return (
@@ -51,21 +44,26 @@ export function LiveFollowingChannels() {
 				</h2>
 			) : (
 				<div className='flex items-center justify-center'>
-          <Hint
-            label={t('hintLabel')}
-            side='right'
-            asChild
-          >
-					<Heart className='mb-1' />
-          </Hint>
+					<Hint
+						label={t('hintLabel')}
+						side='right'
+						asChild>
+						<Heart className='mb-1' />
+					</Hint>
 				</div>
 			)}
-			{liveChannels.map((channel, i) => (
-				<ChannelItem
-					key={i}
-					channel={channel.following}
-				/>
-			))}
+			{[...channels]
+				.slice(0, 5)
+				.sort(
+					(a, b) =>
+						(b.following.stream.isLive ? 1 : 0) - (a.following.stream.isLive ? 1 : 0)
+				)
+				.map((channel, i) => (
+					<ChannelItem
+						key={i}
+						channel={channel.following}
+					/>
+				))}
 		</div>
 	);
 }

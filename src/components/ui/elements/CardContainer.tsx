@@ -18,7 +18,7 @@ export function CardContainer({
 }: React.PropsWithChildren<Props>) {
 	return (
 		<Card className={cn('p-5', className)}>
-			<div className='flex items-center justify-between'>
+			<div className='flex items-center justify-between gap-x-1'>
 				<div className='space-y-1'>
 					<h2 className='font-semibold tracking-wide'>{heading}</h2>
 					<p className='max-w-4xl text-sm text-muted-foreground'>{description}</p>

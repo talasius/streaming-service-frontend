@@ -4,12 +4,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/common
 import { Heading } from '@/components/ui/elements';
 import { useTranslations } from 'next-intl';
 import { ChangeEmailForm } from './account/ChangeEmailForm';
+import { ChangePasswordForm } from './account/ChangePasswordForm';
+import { DeactivateCard } from './account/DeactivateCard';
+import { TotpWrapper } from './account/totp/TotpWrapper';
+import { ChangeThemeForm } from './appearance/ChangeThemeForm';
 import { ChangeAvatarForm } from './profile/ChangeAvatarForm';
 import { ChangeInfoForm } from './profile/ChangeInfoForm';
 import { SocialLinksForm } from './profile/socials-form/SocialLinksForm';
-import { ChangePasswordForm } from './account/ChangePasswordForm';
-import { TotpWrapper } from './account/totp/TotpWrapper';
-import { DeactivateCard } from './account/DeactivateCard';
+import { ChangeLanguageForm } from './appearance/ChangeLanguageForm';
+import { ChangeColorForm } from './appearance/ChangeColorForm';
 
 export function UserSettings() {
 	const t = useTranslations('dashboard.settings');
@@ -79,10 +82,20 @@ export function UserSettings() {
 							title={t('account.header.deactivationHeading')}
 							description={t('account.header.deactivationDescription')}
 						/>
-            <DeactivateCard />
+						<DeactivateCard />
 					</div>
 				</TabsContent>
-				<TabsContent value='appearance'>appearance</TabsContent>
+				<TabsContent value='appearance'>
+					<div className='mt-5 space-y-6'>
+						<Heading
+							title={t('appearance.header.heading')}
+							description={t('appearance.header.description')}
+						/>
+						<ChangeThemeForm />
+						<ChangeLanguageForm />
+						<ChangeColorForm />
+					</div>
+				</TabsContent>
 				<TabsContent value='notifications'>notifications</TabsContent>
 				<TabsContent value='sessions'>sessions</TabsContent>
 			</Tabs>

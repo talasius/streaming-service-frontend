@@ -34,12 +34,14 @@ export function RecommendedChannels() {
 			)}
 			{isLoading
 				? Array.from({ length: 7 }).map((_, i) => <ChannelItemSkeleton key={i} />)
-				: channels.map((channel, i) => (
-						<ChannelItem
-							key={i}
-							channel={channel}
-						/>
-				  ))}
+				: [...channels]
+						.sort((a, b) => (b.stream.isLive ? 1 : 0) - (a.stream.isLive ? 1 : 0))
+						.map((channel, i) => (
+							<ChannelItem
+								key={i}
+								channel={channel}
+							/>
+						))}
 		</div>
 	);
 }

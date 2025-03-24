@@ -1,0 +1,98 @@
+/*Violet*/
+.theme-violet {
+	--primary: oklch(54.1% 61.75% 293.009);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-violet {
+	--primary: oklch(49.1% 60.25% 292.581);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*blue*/
+.theme-blue {
+	--primary: oklch(62.8% 32.75% 245.286);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-blue {
+	--primary: oklch(59.9% 29.75% 245.061);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*turquoise*/
+.theme-turquoise {
+	--primary: oklch(70.9% 30% 187.169);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-turquoise {
+	--primary: oklch(70.9% 30% 187.169);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*peach*/
+.theme-yellow {
+	--primary: oklch(78.5% 39%, 82.955);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-yellow {
+	--primary: oklch(82.5% 42.75% 79.939);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*rose*/
+.theme-rose {
+	--primary: oklch(66.6% 45% 23.312);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-rose {
+	--primary: oklch(58.9% 34.75% 22.285);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*pink*/
+.theme-pink {
+	--primary: oklch(54.3% 50% 359.9);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-pink {
+	--primary: oklch(64.3% 61% 0.712);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*mint*/
+.theme-mint {
+	--primary: oklch(80.5% 52.5% 145.119);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-mint {
+	--primary: oklch(74.5% 48.5% 145.179);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*lime-green*/
+.theme-lime-green {
+	--primary: oklch(72.2% 15.75% 163.101);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-lime-green {
+	--primary: oklch(72.2% 15.75% 163.101);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+/*soft-blue*/
+.theme-soft-blue {
+	--primary: oklch(73.3% 28% 283.284);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}
+
+.dark .theme-soft-blue {
+	--primary: oklch(73.3% 28% 283.284);
+	--primary-foreground: oklch(98.5% 0.5% 247.839);
+}

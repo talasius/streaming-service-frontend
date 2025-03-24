@@ -119,7 +119,7 @@
 			"emailDescription": "Your email you used during registration.",
 			"passwordLabel": "Password",
 			"passwordDescription": "Your account password.",
-      "pinLabel": "6-digit code",
+			"pinLabel": "6-digit code",
 			"pinDescription": "A 6-digit code has been sent to your email. If you have enabled Telegram notifications, the code has also been sent there.",
 			"submitButton": "Deactivate account",
 			"successMessage": "You have successfully deactivated your account",
@@ -254,6 +254,28 @@
 						"message": "Are you sure you want to deactivate your account? Access can only be restored within 7 days."
 					},
 					"deactivateButton": "Deactivate"
+				}
+			},
+			"appearance": {
+				"header": {
+					"heading": "Appearance",
+					"description": "Customize the look and feel of the site interface to your liking. Choose the theme and language that will make your experience more comfortable."
+				},
+				"theme": {
+					"heading": "Theme preferences",
+					"description": "Choose how TeaStream looks to you. Select either dark or light theme. Selections are applied immediately and saved automatically.",
+					"successMessage": "Theme successfully changed!",
+					"errorMessage": "Unexpected error occurred while changing the theme. Please try again."
+				},
+				"language": {
+					"heading": "Language preferences",
+					"description": "Choose the language in which you want to see the site interface. Selections are applied immediately and saved automatically.",
+					"selectPlaceholder": "Select language",
+					"successMessage": "Language preferences have been successfully changed!"
+				},
+				"colors": {
+					"heading": "Color preferences",
+					"description": "Choose the color scheme of the site interface. Selections are applied immediately and saved automatically."
 				}
 			}
 		}
