@@ -15,7 +15,7 @@ export function Logo() {
 			<LogoImage />
 			<div className='hidden leading-tight lg:block'>
 				<h2 className='text-lg font-semibold tracking-wider text-accent-foreground'>
-					TeaStream
+					Witch
 				</h2>
 				<p className='text-sm text-muted-foreground'>{t('platform')}</p>
 			</div>

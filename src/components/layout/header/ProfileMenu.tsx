@@ -7,7 +7,7 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from '@/components/ui/common';
-import { ChannelAvatar } from '@/components/ui/elements';
+import { ChannelAvatar, VerifiedBadge } from '@/components/ui/elements';
 import { PAGES } from '@/config/pages-url.config';
 import { useLogoutUserMutation } from '@/graphql/generated/output';
 import { useAuth } from '@/hooks/useAuth';
@@ -54,7 +54,10 @@ export function ProfileMenu() {
 					className='w-[230px]'>
 					<div className='flex items-center gap-x-3 p-2'>
 						<ChannelAvatar channel={user} />
-						<h2 className='font-medium text-foreground'>{user.username}</h2>
+						<div className='flex items-center gap-x-1.5'>
+            <h2 className='font-medium text-foreground'>{user.username}</h2>
+						{user.isVerified && <VerifiedBadge />}
+            </div>
 					</div>
 					<DropdownMenuSeparator />
 
@@ -87,7 +90,7 @@ export function ProfileMenu() {
 						/>
 						<p className='group-hover:text-red-600 transition-colors duration-200 ease-in-out'>
 							{t('logout')}
-						</p>  
+						</p>
 					</DropdownMenuItem>
 				</DropdownMenuContent>
 			</DropdownMenu>

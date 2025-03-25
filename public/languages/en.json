@@ -59,7 +59,7 @@
 	},
 	"auth": {
 		"register": {
-			"heading": "Register to TeaStream",
+			"heading": "Register to Witch",
 			"backButtonLabel": "Already have an account? Login here",
 			"usernameLabel": "Username",
 			"usernameDescription": "This is how other users will see you.",
@@ -78,7 +78,7 @@
 			"errorMessage": "Error verifying account"
 		},
 		"login": {
-			"heading": "Login to TeaStream",
+			"heading": "Login to Witch",
 			"backButtonLabel": "No account? Register here",
 			"loginLabel": "Login",
 			"loginDescription": "Your username or email you used during registration.",
@@ -263,7 +263,7 @@
 				},
 				"theme": {
 					"heading": "Theme preferences",
-					"description": "Choose how TeaStream looks to you. Select either dark or light theme. Selections are applied immediately and saved automatically.",
+					"description": "Choose how Witch looks to you. Select either dark or light theme. Selections are applied immediately and saved automatically.",
 					"successMessage": "Theme successfully changed!",
 					"errorMessage": "Unexpected error occurred while changing the theme. Please try again."
 				},
@@ -277,6 +277,50 @@
 					"heading": "Color preferences",
 					"description": "Choose the color scheme of the site interface. Selections are applied immediately and saved automatically."
 				}
+			},
+			"notifications": {
+				"header": {
+					"heading": "Notifications",
+					"description": "Configure how you want to receive notifications from Witch. You will receive notifications about the start of broadcasts on the channels you are subscribed to, as well as about new subscribers."
+				},
+				"siteNotifications": {
+					"heading": "Site notifications",
+					"description": "If you turn off site notifications, you will not receive notifications about the start of broadcasts on the channels you are subscribed to, as well as about new subscribers."
+				},
+				"telegramNotifications": {
+					"heading": "Telegram notifications",
+					"description": "If you enable Telegram notifications, your Witch account will be linked to your Telegram account, and you will receive messages about the start of broadcasts on the channels you are subscribed to, about new subscribers, password resets, and confirmation codes."
+				},
+				"successMessage": "Notifications settings successfully changed!",
+				"errorMessage": "Unexpected error occurred while changing notification settings. Please try again."
+			},
+			"sessions": {
+				"header": {
+					"heading": "Sessions",
+					"description": "Sessions are the devices you use or have used to log into your Whitch account. Active sessions are shown here."
+				},
+				"info": {
+					"current": "Current session",
+					"active": "Active sessions",
+					"notFound": "No active sessions found"
+				},
+				"sessionsItem": {
+					"deleteButton": "Delete",
+					"detailsButton": "Details",
+					"confirmModal": {
+						"heading": "Delete session",
+						"message": "Are you sure you want to delete this session? This action will permanently delete the session on this device and terminate all active actions associated with it."
+					},
+					"successMessage": "Session has been successfully deleted",
+					"errorMessage": "Unexpected error occurred while deleting session. Please try again."
+				},
+				"sessionModal": {
+					"heading": "Session details",
+					"device": "Device:",
+					"location": "Location:",
+					"ipAdress": "IP-address:",
+					"createdAt": "Created at:"
+				}
 			}
 		}
 	},
@@ -287,6 +331,24 @@
 		"confirmModal": {
 			"cancel": "Cancel",
 			"continue": "Confirm"
+		}
+	},
+	"utils": {
+		"formatDate": {
+			"months": {
+				"january": "January",
+				"february": "February",
+				"march": "March",
+				"april": "April",
+				"may": "May",
+				"june": "June",
+				"july": "July",
+				"august": "August",
+				"september": "September",
+				"october": "October",
+				"november": "November",
+				"december": "December"
+			}
 		}
 	}
 }

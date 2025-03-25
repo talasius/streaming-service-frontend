@@ -118,6 +118,12 @@ export function SocialLinkItem({ socialLink, provided }: Props) {
 												<Input
 													placeholder='https://youtube.com/@yourname'
 													disabled={isUpdateLoading || isRemoveLoading}
+													onKeyDown={(e) => {
+														if (e.key === 'Enter') {
+															e.preventDefault();
+															onSubmit(form.getValues());
+														}
+													}}
 													className='h-8'
 													{...field}
 												/>

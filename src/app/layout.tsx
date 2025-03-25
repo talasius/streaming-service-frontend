@@ -10,7 +10,7 @@ import '@/styles/themes.css';
 import { ColorSwitcher } from '@/components/ui/elements/ColorSwitcher';
 
 export const metadata: Metadata = {
-	title: 'TeaStream',
+	title: 'Witch',
 	description: 'Modern streaming planform',
 };
 

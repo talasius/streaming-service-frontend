@@ -5,13 +5,13 @@ import { ChannelAvatar } from '@/components/ui/elements';
 import { ConfirmModal } from '@/components/ui/elements/ConfirmModal';
 import { FormWrapper } from '@/components/ui/elements/FormWrapper';
 import {
-  useChangeProfileAvatarMutation,
-  useRemoveProfileAvatarMutation,
+	useChangeProfileAvatarMutation,
+	useRemoveProfileAvatarMutation,
 } from '@/graphql/generated/output';
 import { useCurrent } from '@/hooks/useCurrent';
 import { uploadFileShema, type TUploadFileSchema } from '@/schemas/upload-file.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Trash2 } from 'lucide-react';
+import { Camera, Trash2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
@@ -70,17 +70,24 @@ export function ChangeAvatarForm() {
 					render={({ field }) => (
 						<div className='px-5 pb-5'>
 							<div className='w-full items-center lg:flex space-x-6'>
-								<ChannelAvatar
-									channel={{
-										username: user?.username,
-										avatar:
-											field.value instanceof File
-												? URL.createObjectURL(field.value)
-												: field.value,
-									}}
-									size='xl'
-									className='ring-2 ring-primary'
-								/>
+								<div className='relative group'>
+									<ChannelAvatar
+										channel={{
+											username: user?.username,
+											avatar:
+												field.value instanceof File
+													? URL.createObjectURL(field.value)
+													: field.value,
+										}}
+										size='xl'
+										className='ring-2 ring-primary'
+									/>
+									<div
+										className='absolute size-32 flex items-center justify-center rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-transparent text-transparent cursor-pointer group-hover:bg-black/40 group-hover:text-white transition-all duration-200 ease-in-out'
+										onClick={() => inputRef.current?.click()}>
+										<Camera />
+									</div>
+								</div>
 								<div className='space-y-3'>
 									<div className='flex items-center gap-x-3'>
 										<input

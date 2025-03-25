@@ -296,6 +296,11 @@ export type MutationLoginUserArgs = {
 };
 
 
+export type MutationRemoveSessionArgs = {
+  id: Scalars['String']['input'];
+};
+
+
 export type MutationRemoveSocialLinkArgs = {
   id: Scalars['String']['input'];
 };
@@ -643,6 +648,13 @@ export type ChangeEmailMutationVariables = Exact<{
 
 export type ChangeEmailMutation = { __typename?: 'Mutation', changeEmail: boolean };
 
+export type ChangeNotificationsSettingsMutationVariables = Exact<{
+  data: ChangeNotificationsSettingsInput;
+}>;
+
+
+export type ChangeNotificationsSettingsMutation = { __typename?: 'Mutation', changeNotificationsSettings: { __typename?: 'ChangeNotificationsSettingsResponse', telegramAuthToken?: string | null, notificationsSettings: { __typename?: 'NotificationsSettingsModel', siteNotifications: boolean, telegramNotifications: boolean } } };
+
 export type ChangePasswordMutationVariables = Exact<{
   data: ChangePasswordInput;
 }>;
@@ -693,6 +705,13 @@ export type RemoveProfileAvatarMutationVariables = Exact<{ [key: string]: never;
 
 export type RemoveProfileAvatarMutation = { __typename?: 'Mutation', removeProfileAvatar: boolean };
 
+export type RemoveSessionMutationVariables = Exact<{
+  id: Scalars['String']['input'];
+}>;
+
+
+export type RemoveSessionMutation = { __typename?: 'Mutation', removeSession: boolean };
+
 export type RemoveSocialLinkMutationVariables = Exact<{
   id: Scalars['String']['input'];
 }>;
@@ -725,10 +744,20 @@ export type FindRecommendedChannelsQueryVariables = Exact<{ [key: string]: never
 
 export type FindRecommendedChannelsQuery = { __typename?: 'Query', findRecommmendedChannels: Array<{ __typename?: 'UserModel', username: string, displayName: string, avatar?: string | null, isVerified: boolean, stream: { __typename?: 'StreamModel', title: string, isLive: boolean, category: { __typename?: 'CategoryModel', title: string } } }> };
 
+export type FindCurrentSessionQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FindCurrentSessionQuery = { __typename?: 'Query', findCurrentSession: { __typename?: 'SessionModel', id: string, createdAt: string, metadata: { __typename?: 'SessionMetadataModel', ip: string, location: { __typename?: 'LocationModel', country: string, city: string, latitude: string, longitude: string }, device: { __typename?: 'DeviceModel', browser: string, os: string } } } };
+
 export type FindProfileQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', id: string, username: string, displayName: string, bio?: string | null, email: string, avatar?: string | null, isTotpEnabled: boolean } };
+export type FindProfileQuery = { __typename?: 'Query', findProfile: { __typename?: 'UserModel', id: string, username: string, displayName: string, bio?: string | null, email: string, avatar?: string | null, isTotpEnabled: boolean, isVerified: boolean, notificationsSettings: { __typename?: 'NotificationsSettingsModel', siteNotifications: boolean, telegramNotifications: boolean } } };
+
+export type FindSessionsByUserQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FindSessionsByUserQuery = { __typename?: 'Query', findSessionsByUser: Array<{ __typename?: 'SessionModel', id: string, createdAt: string, metadata: { __typename?: 'SessionMetadataModel', ip: string, location: { __typename?: 'LocationModel', country: string, city: string, latitude: string, longitude: string }, device: { __typename?: 'DeviceModel', browser: string, os: string } } }> };
 
 export type FindSocialLinksQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1013,6 +1042,43 @@ export function useChangeEmailMutation(baseOptions?: Apollo.MutationHookOptions<
 export type ChangeEmailMutationHookResult = ReturnType<typeof useChangeEmailMutation>;
 export type ChangeEmailMutationResult = Apollo.MutationResult<ChangeEmailMutation>;
 export type ChangeEmailMutationOptions = Apollo.BaseMutationOptions<ChangeEmailMutation, ChangeEmailMutationVariables>;
+export const ChangeNotificationsSettingsDocument = gql`
+    mutation ChangeNotificationsSettings($data: ChangeNotificationsSettingsInput!) {
+  changeNotificationsSettings(data: $data) {
+    notificationsSettings {
+      siteNotifications
+      telegramNotifications
+    }
+    telegramAuthToken
+  }
+}
+    `;
+export type ChangeNotificationsSettingsMutationFn = Apollo.MutationFunction<ChangeNotificationsSettingsMutation, ChangeNotificationsSettingsMutationVariables>;
+
+/**
+ * __useChangeNotificationsSettingsMutation__
+ *
+ * To run a mutation, you first call `useChangeNotificationsSettingsMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useChangeNotificationsSettingsMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [changeNotificationsSettingsMutation, { data, loading, error }] = useChangeNotificationsSettingsMutation({
+ *   variables: {
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useChangeNotificationsSettingsMutation(baseOptions?: Apollo.MutationHookOptions<ChangeNotificationsSettingsMutation, ChangeNotificationsSettingsMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ChangeNotificationsSettingsMutation, ChangeNotificationsSettingsMutationVariables>(ChangeNotificationsSettingsDocument, options);
+      }
+export type ChangeNotificationsSettingsMutationHookResult = ReturnType<typeof useChangeNotificationsSettingsMutation>;
+export type ChangeNotificationsSettingsMutationResult = Apollo.MutationResult<ChangeNotificationsSettingsMutation>;
+export type ChangeNotificationsSettingsMutationOptions = Apollo.BaseMutationOptions<ChangeNotificationsSettingsMutation, ChangeNotificationsSettingsMutationVariables>;
 export const ChangePasswordDocument = gql`
     mutation ChangePassword($data: ChangePasswordInput!) {
   changePassword(data: $data)
@@ -1258,6 +1324,37 @@ export function useRemoveProfileAvatarMutation(baseOptions?: Apollo.MutationHook
 export type RemoveProfileAvatarMutationHookResult = ReturnType<typeof useRemoveProfileAvatarMutation>;
 export type RemoveProfileAvatarMutationResult = Apollo.MutationResult<RemoveProfileAvatarMutation>;
 export type RemoveProfileAvatarMutationOptions = Apollo.BaseMutationOptions<RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables>;
+export const RemoveSessionDocument = gql`
+    mutation RemoveSession($id: String!) {
+  removeSession(id: $id)
+}
+    `;
+export type RemoveSessionMutationFn = Apollo.MutationFunction<RemoveSessionMutation, RemoveSessionMutationVariables>;
+
+/**
+ * __useRemoveSessionMutation__
+ *
+ * To run a mutation, you first call `useRemoveSessionMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRemoveSessionMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [removeSessionMutation, { data, loading, error }] = useRemoveSessionMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useRemoveSessionMutation(baseOptions?: Apollo.MutationHookOptions<RemoveSessionMutation, RemoveSessionMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<RemoveSessionMutation, RemoveSessionMutationVariables>(RemoveSessionDocument, options);
+      }
+export type RemoveSessionMutationHookResult = ReturnType<typeof useRemoveSessionMutation>;
+export type RemoveSessionMutationResult = Apollo.MutationResult<RemoveSessionMutation>;
+export type RemoveSessionMutationOptions = Apollo.BaseMutationOptions<RemoveSessionMutation, RemoveSessionMutationVariables>;
 export const RemoveSocialLinkDocument = gql`
     mutation RemoveSocialLink($id: String!) {
   removeSocialLink(id: $id)
@@ -1452,6 +1549,59 @@ export type FindRecommendedChannelsQueryHookResult = ReturnType<typeof useFindRe
 export type FindRecommendedChannelsLazyQueryHookResult = ReturnType<typeof useFindRecommendedChannelsLazyQuery>;
 export type FindRecommendedChannelsSuspenseQueryHookResult = ReturnType<typeof useFindRecommendedChannelsSuspenseQuery>;
 export type FindRecommendedChannelsQueryResult = Apollo.QueryResult<FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables>;
+export const FindCurrentSessionDocument = gql`
+    query FindCurrentSession {
+  findCurrentSession {
+    id
+    createdAt
+    metadata {
+      location {
+        country
+        city
+        latitude
+        longitude
+      }
+      device {
+        browser
+        os
+      }
+      ip
+    }
+  }
+}
+    `;
+
+/**
+ * __useFindCurrentSessionQuery__
+ *
+ * To run a query within a React component, call `useFindCurrentSessionQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindCurrentSessionQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindCurrentSessionQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useFindCurrentSessionQuery(baseOptions?: Apollo.QueryHookOptions<FindCurrentSessionQuery, FindCurrentSessionQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FindCurrentSessionQuery, FindCurrentSessionQueryVariables>(FindCurrentSessionDocument, options);
+      }
+export function useFindCurrentSessionLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FindCurrentSessionQuery, FindCurrentSessionQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FindCurrentSessionQuery, FindCurrentSessionQueryVariables>(FindCurrentSessionDocument, options);
+        }
+export function useFindCurrentSessionSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindCurrentSessionQuery, FindCurrentSessionQueryVariables>) {
+          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<FindCurrentSessionQuery, FindCurrentSessionQueryVariables>(FindCurrentSessionDocument, options);
+        }
+export type FindCurrentSessionQueryHookResult = ReturnType<typeof useFindCurrentSessionQuery>;
+export type FindCurrentSessionLazyQueryHookResult = ReturnType<typeof useFindCurrentSessionLazyQuery>;
+export type FindCurrentSessionSuspenseQueryHookResult = ReturnType<typeof useFindCurrentSessionSuspenseQuery>;
+export type FindCurrentSessionQueryResult = Apollo.QueryResult<FindCurrentSessionQuery, FindCurrentSessionQueryVariables>;
 export const FindProfileDocument = gql`
     query FindProfile {
   findProfile {
@@ -1462,6 +1612,11 @@ export const FindProfileDocument = gql`
     email
     avatar
     isTotpEnabled
+    isVerified
+    notificationsSettings {
+      siteNotifications
+      telegramNotifications
+    }
   }
 }
     `;
@@ -1497,6 +1652,59 @@ export type FindProfileQueryHookResult = ReturnType<typeof useFindProfileQuery>;
 export type FindProfileLazyQueryHookResult = ReturnType<typeof useFindProfileLazyQuery>;
 export type FindProfileSuspenseQueryHookResult = ReturnType<typeof useFindProfileSuspenseQuery>;
 export type FindProfileQueryResult = Apollo.QueryResult<FindProfileQuery, FindProfileQueryVariables>;
+export const FindSessionsByUserDocument = gql`
+    query FindSessionsByUser {
+  findSessionsByUser {
+    id
+    createdAt
+    metadata {
+      location {
+        country
+        city
+        latitude
+        longitude
+      }
+      device {
+        browser
+        os
+      }
+      ip
+    }
+  }
+}
+    `;
+
+/**
+ * __useFindSessionsByUserQuery__
+ *
+ * To run a query within a React component, call `useFindSessionsByUserQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindSessionsByUserQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindSessionsByUserQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useFindSessionsByUserQuery(baseOptions?: Apollo.QueryHookOptions<FindSessionsByUserQuery, FindSessionsByUserQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FindSessionsByUserQuery, FindSessionsByUserQueryVariables>(FindSessionsByUserDocument, options);
+      }
+export function useFindSessionsByUserLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FindSessionsByUserQuery, FindSessionsByUserQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FindSessionsByUserQuery, FindSessionsByUserQueryVariables>(FindSessionsByUserDocument, options);
+        }
+export function useFindSessionsByUserSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindSessionsByUserQuery, FindSessionsByUserQueryVariables>) {
+          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<FindSessionsByUserQuery, FindSessionsByUserQueryVariables>(FindSessionsByUserDocument, options);
+        }
+export type FindSessionsByUserQueryHookResult = ReturnType<typeof useFindSessionsByUserQuery>;
+export type FindSessionsByUserLazyQueryHookResult = ReturnType<typeof useFindSessionsByUserLazyQuery>;
+export type FindSessionsByUserSuspenseQueryHookResult = ReturnType<typeof useFindSessionsByUserSuspenseQuery>;
+export type FindSessionsByUserQueryResult = Apollo.QueryResult<FindSessionsByUserQuery, FindSessionsByUserQueryVariables>;
 export const FindSocialLinksDocument = gql`
     query FindSocialLinks {
   findSocialLinks {

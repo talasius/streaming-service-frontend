@@ -1,11 +1,16 @@
 query FindProfile {
 	findProfile {
-    id
+		id
 		username
 		displayName
 		bio
 		email
 		avatar
-    isTotpEnabled
+		isTotpEnabled
+    isVerified
+		notificationsSettings {
+			siteNotifications
+			telegramNotifications
+		}
 	}
 }

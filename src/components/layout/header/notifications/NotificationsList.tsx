@@ -34,7 +34,7 @@ export function NotificationsList() {
 					/>
 					{t('loading')}
 				</div>
-			) : notifications ? (
+			) : notifications.length ? (
 				notifications.map((notification, i) => {
 					const Icon = getNotificationIcon(notification.type);
 
@@ -51,7 +51,7 @@ export function NotificationsList() {
 					);
 				})
 			) : (
-				<div className='text-center text-muted-foreground'>{t('empty')}</div>
+				<div className='text-center text-sm text-muted-foreground'>{t('empty')}</div>
 			)}
 		</>
 	);
