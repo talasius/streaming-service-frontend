@@ -1,24 +1,24 @@
 'use client';
 
 import {
-  Button,
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  Input,
-  Separator,
-  Skeleton,
-  Textarea,
+	Button,
+	Form,
+	FormControl,
+	FormDescription,
+	FormField,
+	FormItem,
+	FormLabel,
+	Input,
+	Separator,
+	Skeleton,
+	Textarea,
 } from '@/components/ui/common';
-import { FormWrapper } from '@/components/ui/elements/FormWrapper';
+import { FormWrapper } from '@/components/ui/elements';
 import { useChangeProfileInfoMutation } from '@/graphql/generated/output';
 import { useCurrent } from '@/hooks/useCurrent';
 import {
-  changeInfoSchema,
-  type TChangeInfoSchema,
+	changeInfoSchema,
+	type TChangeInfoSchema,
 } from '@/schemas/user/change-info.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';

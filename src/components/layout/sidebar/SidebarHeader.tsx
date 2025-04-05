@@ -15,7 +15,6 @@ export function SidebarHeader() {
 	const { isCollapsed, open, close } = useSidebar();
 
 	const label = isCollapsed ? t('expand') : t('collapse');
-	const isDashboardPage = pathname.includes(PAGES.DASHBOARD);
 
 	return isCollapsed ? (
 		<div className='mb-4 hidden w-full items-center justify-center pt-4 lg:flex'>

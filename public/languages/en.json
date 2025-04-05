@@ -322,6 +322,152 @@
 					"createdAt": "Created at:"
 				}
 			}
+		},
+		"keys": {
+			"header": {
+				"heading": "Stream keys",
+				"description": "Generate a URL and key for live streaming."
+			},
+			"url": {
+				"heading": "URL",
+				"placeholder": "Your server URL will be displayed here"
+			},
+			"key": {
+				"heading": "Stream key",
+				"placeholder": "Stream key will be displayed here"
+			},
+			"instructionsModal": {
+				"trigger": "Instructions",
+				"heading": "🛠️ OBS setup instructions for live streaming",
+				"description": "To start sharing your content with the audience, follow the detailed instructions on connecting OBS Studio. Just a few steps and you're ready to go live!",
+				"step1Title": "🔑 Step 1: Download OBS Studio and generate Server URL and Stream Key",
+				"step1Description": "To start broadcasting, you need to get two important elements: Server URL and Stream Key. Follow these steps:",
+				"downloadObs": "Download and install OBS Studio",
+				"downloadObsDescription": "Before you start broadcasting, download and install the program",
+				"obsLinkText": "OBS Studio",
+				"copyKeys": "Copy Server URL and Stream Key",
+				"copyKeysDescription": "After generation, two fields will appear on the screen: Server URL and Stream Key. Copy the data.",
+				"step2Title": "🎛️ Step 2: Setting up OBS Studio",
+				"step2Description": "Now that you have the necessary data, let's set up OBS Studio to work with your broadcast:",
+				"openObs": "Open OBS Studio",
+				"openObsDescription": "If you do not have OBS Studio installed, download and install the program from the official website. After starting, the main page of OBS Studio will open.",
+				"openStreamSettings": "Open stream settings",
+				"openStreamSettingsDescription": "In the top menu, click \"File\" → \"Settings\". Go to the \"Stream\" tab",
+				"enterDetails": "Enter your details",
+				"enterDetailsDescription": "In the \"Service\" field, select the \"Custom...\" option. Paste the previously copied Server URL into the \"URL\" field. In the \"Stream Key\" field, paste your Stream Key.",
+				"saveSettings": "Save settings",
+				"saveSettingsDescription": "Click \"Apply\", and then \"OK\" to save the changes.",
+				"step3Title": "🚀 Step 3: Starting the broadcast",
+				"step3Description": "After successfully setting up OBS Studio, you are ready to start live streaming:",
+				"startStream": "Start streaming",
+				"startStreamDescription": "Return to the main OBS Studio screen and click the \"Start Streaming\" button.",
+				"monitorStream": "Monitor your stream",
+				"monitorStreamDescription": "Your stream will start in real-time mode, and you will be able to watch it on the platform as well as in OBS Studio.",
+				"congrats": "✨ Congratulations! You have now successfully set up OBS Studio for broadcasting on our platform. Your audience is waiting for new bright moments!",
+				"close": "Close"
+			},
+			"createModal": {
+				"trigger": "Generate keys",
+				"heading": "Generate keys",
+				"ingressTypeLabel": "Connection type",
+				"ingressTypePlaceholder": "Select connection type",
+				"ingressTypeDescription": "Select RTMP for classic broadcasting or WHIP for WebRTC connections.",
+				"submitButton": "Generate",
+				"successMessage": "Ingress successfully created",
+				"errorMessage": "Unexpected error occurred while creating ingress. Please try again."
+			}
+		},
+		"chat": {
+			"header": {
+				"heading": "Chat Settings",
+				"description": "Here you can manage your chat settings."
+			},
+			"isChatEnabled": {
+				"heading": "Enable chat",
+				"description": "If you enable chat, viewers of your live stream will be able to write messages in the chat."
+			},
+			"isChatFollowersOnly": {
+				"heading": "Followers only chat",
+				"description": "If you enable this setting, only your followers will be able to write in the chat during the live stream"
+			},
+			"isChatPremiumFollowersOnly": {
+				"heading": "Sponsors only chat",
+				"description": "If you enable this setting, only your sponsors will be able to write in the chat during the live stream"
+			},
+			"successMessage": "Chat settings successfully changed",
+			"errorMessage": "Unexpected error occurred while changing chat settings. Please try again."
+		},
+		"followers": {
+			"header": {
+				"heading": "Followers",
+				"description": "Keep track of your followers, here you can see the list of all your followers."
+			},
+			"columns": {
+				"date": "Following since",
+				"user": "User",
+				"actions": "Actions",
+				"viewChannel": "View channel"
+			}
+		},
+		"sponsors": {
+			"header": {
+				"heading": "Sponsors",
+				"description": "Keep track of your sponors, here you can see the list of all your sponors."
+			},
+			"columns": {
+				"date": "Active till",
+				"user": "User",
+				"plan": "Plan",
+				"actions": "Actions",
+				"viewChannel": "View channel"
+			}
+		},
+		"plans": {
+			"header": {
+				"heading": "Premium plans",
+				"description": "Here you can see the list of premium plans for your channel."
+			},
+			"alert": {
+				"heading": "Channel verification required",
+				"description": "To create premium plans, your channel must be verified. To verify your channel, you need to have 1000 one-time subscribers."
+			},
+			"createForm": {
+				"trigger": "Create plan",
+				"heading": "Create plan",
+				"titleLabel": "Plan name",
+				"titlePlaceholder": "Premium channel subscription",
+				"titleDescription": "Enter the name of your plan. This name will be displayed to your channel subscribers.",
+				"descriptionLabel": "Plan description",
+				"descriptionPlaceholder": "Describe what your plan includes.",
+				"descriptionDescription": "Describe what your plan includes. This will help subscribers understand the benefits of subscribing.",
+				"priceLabel": "Price",
+				"priceDescription": "Specify the price of your plan. This is the amount that premium subscribers will pay for the subscription.",
+				"submitButton": "Create",
+				"successMessage": "Premium plan successfully created",
+				"errorMessage": "Unexpected error occurred while creating a premium plan. Please try again."
+			},
+			"columns": {
+				"date": "Created at",
+				"title": "Title",
+				"price": "Price",
+				"actions": "Actions",
+				"remove": "Remove"
+			}
+		},
+		"transactions": {
+			"header": {
+				"heading": "Transactions",
+				"description": "Here you can see all transactions related to channel sponsorship."
+			},
+			"columns": {
+				"date": "Created at",
+				"status": "Status",
+				"success": "Success",
+				"pending": "Pending",
+				"failed": "Failed",
+				"expired": "Expired",
+				"amount": "Amount"
+			}
 		}
 	},
 	"components": {
@@ -331,6 +477,9 @@
 		"confirmModal": {
 			"cancel": "Cancel",
 			"continue": "Confirm"
+		},
+		"dataTable": {
+			"empty": "No results"
 		}
 	},
 	"utils": {

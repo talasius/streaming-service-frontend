@@ -24,7 +24,7 @@ export function SidebarItem({ route }: Props) {
 			side='right'
 			asChild>
 			<Button
-				className={cn('size-11 justify-center hover:text-primary transition-colors duration-200', isActive && 'bg-accent', !isCollapsed && 'h-11 w-full')}
+				className={cn('size-11 justify-center hover:text-primary', isActive && 'bg-accent', !isCollapsed && 'h-11 w-full')}
 				variant='ghost'
 				asChild>
 				<Link href={route.href}>

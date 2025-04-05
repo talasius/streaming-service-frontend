@@ -1,8 +1,8 @@
 'use client';
 
 import { Button } from '@/components/ui/common';
-import { CardContainer } from '@/components/ui/elements/CardContainer';
-import { ConfirmModal } from '@/components/ui/elements/ConfirmModal';
+import { CardContainer } from '@/components/ui/elements';
+import { ConfirmModal } from '@/components/ui/elements';
 import { PAGES } from '@/config/pages-url.config';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';

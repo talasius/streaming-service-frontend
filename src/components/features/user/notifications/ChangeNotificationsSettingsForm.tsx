@@ -1,7 +1,7 @@
 'use client';
 
 import { Form, FormField } from '@/components/ui/common';
-import { ToggleCard, ToggleCardSkeleton } from '@/components/ui/elements/ToggleCard';
+import { ToggleCard, ToggleCardSkeleton } from '@/components/ui/elements';
 import { useChangeNotificationsSettingsMutation } from '@/graphql/generated/output';
 import { useCurrent } from '@/hooks/useCurrent';
 import {

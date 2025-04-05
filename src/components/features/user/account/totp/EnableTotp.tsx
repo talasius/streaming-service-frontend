@@ -18,6 +18,7 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from '@/components/ui/common';
+import { CopyButton } from '@/components/ui/elements';
 import {
   useEnabletTotpMutation,
   useGenerateTotpSecretQuery,
@@ -116,19 +117,7 @@ export function EnableTotp() {
 							<span className='text-sm leading-0 text-muted-foreground group-hover:text-primary transition-colors cursor-pointer'>
 								{twoFactorAuth?.secret && twoFactorAuth.secret}
 							</span>
-							{isCopied ? (
-								<Check
-									name='Copy code'
-									size={16}
-									className='cursor-pointer text-primary transition-colors'
-								/>
-							) : (
-								<ClipboardList
-									name='Copy code'
-									size={16}
-									className='cursor-pointer text-muted-foreground group-hover:text-primary transition-colors'
-								/>
-							)}
+              <CopyButton value={twoFactorAuth?.secret!} className='size-5 text-muted-foreground group-hover:text-primary! hover:bg-transparent' />
 						</div>
 						<FormField
 							control={form.control}

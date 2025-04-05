@@ -28,6 +28,7 @@ export function ToggleCard({
 						checked={value}
 						onCheckedChange={onChange}
 						disabled={isDisabled}
+						className='cursor-pointer'
 					/>
 				)
 			}
@@ -37,5 +38,15 @@ export function ToggleCard({
 }
 
 export function ToggleCardSkeleton() {
-	return <Skeleton className='mt-6 h-20 w-full' />;
+	return (
+		<div className='h-fit w-full rounded-xl bg-card p-5 not-last:mb-6'>
+			<div className='flex items-center justify-between gap-x-4'>
+				<div className='flex flex-col gap-y-3 grow'>
+					<Skeleton className='h-5 w-3xs' />
+					<Skeleton className='h-5 w-xl' />
+				</div>
+				<Skeleton className='h-5 w-9 rounded-xl' />
+			</div>
+		</div>
+	);
 }

@@ -12,7 +12,7 @@ import {
 	Separator,
 	Skeleton,
 } from '@/components/ui/common';
-import { FormWrapper } from '@/components/ui/elements/FormWrapper';
+import { FormWrapper } from '@/components/ui/elements';
 import { PAGES } from '@/config/pages-url.config';
 import { useChangeEmailMutation } from '@/graphql/generated/output';
 import { useCurrent } from '@/hooks/useCurrent';
@@ -59,7 +59,9 @@ export function ChangeEmailForm() {
 	) : (
 		<FormWrapper heading={t('heading')}>
 			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit)} className='grid gap-y-3'>
+				<form
+					onSubmit={form.handleSubmit(onSubmit)}
+					className='grid gap-y-3'>
 					<FormField
 						control={form.control}
 						name='email'

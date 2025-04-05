@@ -1,20 +1,20 @@
 'use client';
 
 import {
-  Form,
-  FormField,
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+	Form,
+	FormField,
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
 } from '@/components/ui/common';
-import { CardContainer } from '@/components/ui/elements/CardContainer';
+import { CardContainer } from '@/components/ui/elements';
 import { languagesSlug } from '@/libs/i18n/config';
 import { setLanguage } from '@/libs/i18n/language';
 import {
-  changeLanguageSchema,
-  TChangeLanguageSchema,
+	changeLanguageSchema,
+	TChangeLanguageSchema,
 } from '@/schemas/user/change-language.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useLocale, useTranslations } from 'next-intl';

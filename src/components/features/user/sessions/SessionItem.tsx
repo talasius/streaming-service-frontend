@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/common';
-import { CardContainer } from '@/components/ui/elements/CardContainer';
+import { CardContainer } from '@/components/ui/elements';
 import {
 	useFindSessionsByUserQuery,
 	useRemoveSessionMutation,
@@ -11,7 +11,7 @@ import { getBrowserIcon } from '@/utils/get-browser-icon';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 import { SessionModal } from './SessionModal';
-import { ConfirmModal } from '@/components/ui/elements/ConfirmModal';
+import { ConfirmModal } from '@/components/ui/elements';
 import { Trash2 } from 'lucide-react';
 
 interface Props {

@@ -1,7 +1,7 @@
 'use client';
 
 import { Form, FormField } from '@/components/ui/common';
-import { CardContainer } from '@/components/ui/elements/CardContainer';
+import { CardContainer } from '@/components/ui/elements';
 import {
 	changeThemeSchema,
 	TChangeThemeSchema,

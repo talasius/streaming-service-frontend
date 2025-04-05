@@ -17,4 +17,5 @@ export * from './switch.tsx';
 export * from './tabs.tsx';
 export * from './textarea.tsx';
 export * from './tooltip.tsx';
+export * from './table.tsx'
 

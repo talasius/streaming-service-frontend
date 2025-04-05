@@ -6,9 +6,10 @@ import { Card } from '../common';
 
 interface Props {
 	heading: string;
-	description: string;
+	description?: string;
 	icon?: IconType | LucideIcon;
 	rightContent?: React.ReactNode;
+	rightContentClassName?: string;
 	className?: string;
 }
 
@@ -18,11 +19,12 @@ export function CardContainer({
 	description,
 	icon: Icon,
 	rightContent,
+	rightContentClassName,
 	className,
 }: React.PropsWithChildren<Props>) {
 	return (
 		<Card className={cn('p-5', className)}>
-			<div className='flex items-center justify-between gap-x-1'>
+			<div className='flex items-center justify-between gap-x-5'>
 				<div className='flex flex-row items-center gap-x-4'>
 					{Icon && (
 						<div className='rounded-full bg-foreground p-2.5'>
@@ -30,15 +32,17 @@ export function CardContainer({
 						</div>
 					)}
 					<div className='space-y-1'>
-						<h2 className='font-semibold tracking-wide'>{heading}</h2>
-						<p className='max-w-4xl text-sm text-muted-foreground text-pretty'>
-							{description}
-						</p>
+						<h2 className='font-semibold tracking-wide min-w-24'>{heading}</h2>
+						{description && (
+							<p className='max-w-4xl text-sm text-muted-foreground text-pretty'>
+								{description}
+							</p>
+						)}
 					</div>
 				</div>
-				{rightContent && <div>{rightContent}</div>}
+				{rightContent && <div className={cn(rightContentClassName)}>{rightContent}</div>}
 			</div>
-			{children && <div className='mt-4'>{children}</div>}
+			{children && <div>{children}</div>}
 		</Card>
 	);
 }

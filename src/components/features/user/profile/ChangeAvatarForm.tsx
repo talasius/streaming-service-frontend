@@ -2,8 +2,8 @@
 
 import { Button, Form, FormField, Skeleton } from '@/components/ui/common';
 import { ChannelAvatar } from '@/components/ui/elements';
-import { ConfirmModal } from '@/components/ui/elements/ConfirmModal';
-import { FormWrapper } from '@/components/ui/elements/FormWrapper';
+import { ConfirmModal } from '@/components/ui/elements';
+import { FormWrapper } from '@/components/ui/elements';
 import {
 	useChangeProfileAvatarMutation,
 	useRemoveProfileAvatarMutation,
@@ -83,7 +83,7 @@ export function ChangeAvatarForm() {
 										className='ring-2 ring-primary'
 									/>
 									<div
-										className='absolute size-32 flex items-center justify-center rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-transparent text-transparent cursor-pointer group-hover:bg-black/40 group-hover:text-white transition-all duration-200 ease-in-out'
+										className='absolute size-32 flex items-center justify-center rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-transparent text-transparent cursor-pointer group-hover:bg-black/50 group-hover:text-white transition-all duration-200 ease-in-out'
 										onClick={() => inputRef.current?.click()}>
 										<Camera />
 									</div>
@@ -111,7 +111,7 @@ export function ChangeAvatarForm() {
 													size='icon'
 													variant='ghost'
 													disabled={isUpdateLoading || isRemoveLoading}
-													className='hover:text-red-500 transition-colors duration-200'>
+													className='hover:text-red-500'>
 													<Trash2 size={16} />
 												</Button>
 											</ConfirmModal>

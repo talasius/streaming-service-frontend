@@ -1,5 +1,3 @@
-'use client';
-
 import { PAGES } from '@/config/pages-url.config';
 import {
 	Banknote,

@@ -1,10 +1,10 @@
 'use client';
 
 import { Heading } from '@/components/ui/elements';
-import { ToggleCardSkeleton } from '@/components/ui/elements/ToggleCard';
+import { ToggleCardSkeleton } from '@/components/ui/elements';
 import {
-  useFindCurrentSessionQuery,
-  useFindSessionsByUserQuery,
+	useFindCurrentSessionQuery,
+	useFindSessionsByUserQuery,
 } from '@/graphql/generated/output';
 import { useTranslations } from 'next-intl';
 import { SessionItem } from './SessionItem';

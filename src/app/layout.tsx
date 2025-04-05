@@ -7,7 +7,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import '@/styles/globals.css';
 import '@/styles/themes.css';
-import { ColorSwitcher } from '@/components/ui/elements/ColorSwitcher';
+import { ColorSwitcher } from '@/components/ui/elements';
 
 export const metadata: Metadata = {
 	title: 'Witch',

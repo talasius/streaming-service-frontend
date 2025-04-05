@@ -31,7 +31,7 @@ export function Hint({
 				{type === 'card' ? (
 					<TooltipContent
 						className={cn(
-							'border border-border rounded-xl flex flex-col gap-y-2 w-fit shadow bg-white text-foreground dark:bg-card dark:shadow-black/20 dark:shadow-md',
+							'border border-border rounded-xl flex flex-col gap-y-1 w-fit shadow bg-white text-foreground dark:bg-card dark:shadow-black/20 dark:shadow-md',
 							className
 						)}
 						side={side}
@@ -46,7 +46,7 @@ export function Hint({
 								{channel?.stream.category.title}
 							</p>
 						</div>
-						<p className='text-pretty text-sm tracking-wide truncate font-semibold max-w-3xs'>
+						<p className='text-pretty text-sm tracking-wide truncate font-normal max-w-3xs'>
 							{channel?.stream.title}
 						</p>
 						<div className='flex items-center gap-x-2'>

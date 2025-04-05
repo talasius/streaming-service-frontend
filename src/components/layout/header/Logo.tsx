@@ -1,5 +1,3 @@
-'use client';
-
 import { LogoImage } from '@/components/images/LogoImage';
 import { PAGES } from '@/config/pages-url.config';
 import { useTranslations } from 'next-intl';

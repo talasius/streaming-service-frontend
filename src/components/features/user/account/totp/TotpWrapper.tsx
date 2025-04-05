@@ -1,7 +1,7 @@
 'use client';
 
 import { Skeleton } from '@/components/ui/common';
-import { CardContainer } from '@/components/ui/elements/CardContainer';
+import { CardContainer } from '@/components/ui/elements';
 import { useCurrent } from '@/hooks/useCurrent';
 import { useTranslations } from 'next-intl';
 import { DisableTotp } from './DisableTotp';
@@ -32,8 +32,8 @@ export function ChangeInfoSkeleton() {
 				<Skeleton className='w-60 h-6' />
 			</div>
 			<div className='flex items-center gap-x-4'>
-      <Skeleton className='grow w-full h-12 rounded-lg'/>
-      <Skeleton className='w-20 h-10 rounded-xl'/>
+				<Skeleton className='grow w-full h-12 rounded-lg' />
+				<Skeleton className='w-20 h-10 rounded-xl' />
 			</div>
 		</div>
 	);

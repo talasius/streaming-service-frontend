@@ -12,7 +12,7 @@ import {
 	Separator,
 	Skeleton,
 } from '@/components/ui/common';
-import { FormWrapper } from '@/components/ui/elements/FormWrapper';
+import { FormWrapper } from '@/components/ui/elements';
 import { useChangePasswordMutation } from '@/graphql/generated/output';
 import { useCurrent } from '@/hooks/useCurrent';
 import {

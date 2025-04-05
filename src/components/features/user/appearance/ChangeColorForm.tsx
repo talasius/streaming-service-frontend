@@ -1,6 +1,6 @@
 'use client';
 
-import { CardContainer } from '@/components/ui/elements/CardContainer';
+import { CardContainer } from '@/components/ui/elements';
 import { BASE_COLORS } from '@/constants/color.constants';
 import { useConfig } from '@/hooks/useConfig';
 import { Check } from 'lucide-react';
