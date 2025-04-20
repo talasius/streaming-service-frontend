@@ -17,7 +17,7 @@
 						"empty": "У вас нет новых уведомлений"
 					},
 					"channel": "Мой канал",
-					"dashboard": "Панель управления",
+					"dashboard": "Настройки",
 					"logout": "Выйти",
 					"successMessage": "Вы успешно вышли из аккаунта",
 					"errorMessage": "Ошибка при выходе из аккаунта"
@@ -54,6 +54,86 @@
 				"sponsors": "Спонсоры",
 				"premium": "Премиум планы",
 				"transactions": "Платежи"
+			}
+		}
+	},
+	"home": {
+		"streamsHeadingLink": "Прямые трансляции, ",
+		"streamsHeading": "которые могут вам понравиться",
+		"categoriesHeadingLink": "Категории, ",
+		"categoriesHeading": "которые могут вам понравиться"
+	},
+	"categories": {
+		"heading": "Категории",
+		"overview": {
+			"heading": "Стримы в этой категории"
+		}
+	},
+	"streams": {
+		"heading": "Прямые трансляции",
+		"searchHeading": "Поиск по запросу"
+	},
+	"stream": {
+		"video": {
+			"offline":{
+        "text":  "не в сети",
+        "linkText1": "Вы можете",
+        "link": "изучить",
+        "linkText2": "другие каналы, пока пользователь не вернется"
+      },
+			"loading": "Подключение...",
+			"player": {
+				"volume": "Громкость",
+				"fullscreen": {
+					"enter": "Полноэкранный режим",
+					"exit": "Выйти из полноэкранного режима"
+				}
+			}
+		},
+		"info": {
+			"viewers": "зрителей",
+			"offline": "не в сети"
+		},
+		"actions": {
+			"follow": {
+				"followButton": "Отслеживать",
+				"confirmUnfollowHeading": "Перестать отслеживать",
+				"confirmUnfollowMessage": "Вы больше не будете получать уведомления от этого канала и он пропадет из списка отслеживаемых.",
+				"unfollowButton": "Перестать отслеживать"
+			},
+			"support": {
+				"alreadySponsor": "Вы уже спонсор",
+				"supportAuthor": "Поддержать автора",
+				"perMonth": "в месяц",
+				"choose": "Выбрать",
+				"errorMessage": "Ошибка при оформления спонсорства"
+			},
+			"share": {
+				"heading": "Поделиться с помощью"
+			}
+		},
+		"aboutChannel": {
+			"heading": "Информания о ",
+			"followersCount": "отслеживают",
+			"noDescription": "Здесь так тихо.."
+		},
+		"sponsors": {
+			"heading": "Спонсоры канала"
+		},
+		"chat": {
+			"heading": "Чат",
+			"unavailable": "Чат не доступен",
+			"unavailableMessage": "Чат недоступен, пока на канале нет прямой трансляции. Пожалуйста, загляните позже.",
+			"loading": "Подключение...",
+			"info": {
+				"authRequired": "Требуется авторизация",
+				"chatDisabled": "Чат отключен",
+				"followersOnly": "Чат доступен только для подписчиков канала",
+				"premiumFollowersOnly": "Чат доступен только для спонсоров канала"
+			},
+			"sendMessage": {
+				"placeholder": "Отправить сообщение",
+				"emojiPlaceholder": "Поиск"
 			}
 		}
 	},
@@ -478,6 +558,10 @@
 		},
 		"dataTable": {
 			"empty": "Ничего не найдено"
+		},
+		"emptyState": {
+			"heading": "Ничего не найдено",
+			"message": "Мы искали в каждом уголку нашего сайта, но по вашему запросу ничего не нашлось. Может попробуете что-то другое?"
 		}
 	},
 	"utils": {

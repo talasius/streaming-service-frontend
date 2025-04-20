@@ -25,11 +25,11 @@ interface Props extends VariantProps<typeof avatarSizes> {
 
 export function ChannelAvatar({ channel, isLive, size, className }: Props) {
 	return (
-		<div className='relative'>
+		<div className='relative group'>
 			<Avatar
 				className={cn(
 					avatarSizes({ size }),
-					isLive && 'ring-2 ring-rose-500',
+					isLive && 'ring-2 ring-rose-400',
 					className
 				)}>
 				<AvatarImage

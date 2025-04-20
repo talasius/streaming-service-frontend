@@ -21,7 +21,7 @@ export function Search() {
 		if (!searchTerm.trim()) return;
 
 		if (searchTerm.trim()) {
-			push(`${PAGES.STREAMS}?q=${searchTerm}`);
+			push(`${PAGES.STREAMS}?searchTerm=${searchTerm}`);
 		} else {
 			push(PAGES.STREAMS);
 		}

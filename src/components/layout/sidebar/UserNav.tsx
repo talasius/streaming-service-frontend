@@ -27,7 +27,7 @@ export function UserNav() {
 	];
 
 	return (
-		<div className='space-y-2 px-2 pt-4 lg:pt-0'>
+		<div className='space-y-2 px-2 pt-4 lg:pt-0 pb-8'>
 			{routes.map((route, i) => (
 				<SidebarItem
 					key={i}

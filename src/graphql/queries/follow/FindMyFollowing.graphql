@@ -1,0 +1,12 @@
+query FindMyFollowings {
+	findMyFollowing {
+		createdAt
+    followingId
+		following {
+			id
+			username
+			displayName
+			isVerified
+		}
+	}
+}

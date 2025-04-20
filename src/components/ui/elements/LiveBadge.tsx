@@ -11,7 +11,7 @@ const liveBadgeSizes = cva('', {
 	variants: {
 		size: {
 			sm: 'size-2',
-			lg: 'p-0.5 px-1.5',
+			lg: 'py-0.5 px-1.5',
 		},
 	},
 	defaultVariants: {
@@ -25,7 +25,7 @@ export function LiveBadge({ size, className }: Props) {
 	return (
 		<div
 			className={cn(
-				'rounded-full bg-rose-500 text-center text-[10px] font-semibold uppercase tracking-wide text-white',
+				'rounded-lg bg-rose-500 text-center text-[10px] font-semibold uppercase tracking-wide text-white',
 				liveBadgeSizes({ size }),
 				className
 			)}>

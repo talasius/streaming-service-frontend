@@ -1,33 +1,46 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
+	AlertDialog,
+	AlertDialogAction,
+	AlertDialogCancel,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogFooter,
+	AlertDialogHeader,
+	AlertDialogTitle,
+	AlertDialogTrigger,
 } from '../common';
+import { Hint } from './Hint';
 
 interface Props {
 	heading: string;
 	message: string;
 	onConfirm: () => void;
+	hasHint?: boolean;
+	hintText?: string;
 }
 
 export function ConfirmModal({
 	children,
 	heading,
 	message,
+	hasHint,
+	hintText,
 	onConfirm,
 }: React.PropsWithChildren<Props>) {
 	const t = useTranslations('components.confirmModal');
 	return (
 		<AlertDialog>
-			<AlertDialogTrigger asChild>{children}</AlertDialogTrigger>
+			{hasHint ? (
+				<Hint
+					asChild
+					label={hintText!}>
+					<AlertDialogTrigger asChild>{children}</AlertDialogTrigger>
+				</Hint>
+			) : (
+				<AlertDialogTrigger asChild>{children}</AlertDialogTrigger>
+			)}
 			<AlertDialogContent>
 				<AlertDialogHeader>
 					<AlertDialogTitle>{heading}</AlertDialogTitle>

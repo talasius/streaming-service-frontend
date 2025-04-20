@@ -12,7 +12,7 @@ import { PAGES } from '@/config/pages-url.config';
 import { useLogoutUserMutation } from '@/graphql/generated/output';
 import { useAuth } from '@/hooks/useAuth';
 import { useCurrent } from '@/hooks/useCurrent';
-import { LayoutDashboard, Loader, LogOut, User } from 'lucide-react';
+import { LayoutDashboard, Loader, LogOut, Settings, User } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -73,7 +73,7 @@ export function ProfileMenu() {
 
 					<Link href={PAGES.SETTINGS}>
 						<DropdownMenuItem>
-							<LayoutDashboard
+							<Settings
 								size={16}
 								className='mr-2'
 							/>

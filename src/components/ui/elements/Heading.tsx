@@ -1,3 +1,4 @@
+import type { TypeHeadingLink } from '@/types/types';
 import { cn } from '@/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
@@ -15,16 +16,32 @@ const headingSizes = cva('', {
 	},
 });
 
-interface Props extends VariantProps<typeof headingSizes> {
+interface ComponentProps extends VariantProps<typeof headingSizes> {
 	title: string;
 	description?: string;
 	className?: string;
 }
 
-export function Heading({ size, title, description, className }: Props) {
+type Props = ComponentProps & TypeHeadingLink;
+
+export function Heading({
+	size,
+	title,
+	titleLink,
+	titleLinkHref,
+	description,
+	className,
+}: Props) {
 	return (
 		<div className={cn('space-y-2', className)}>
 			<h1 className={cn('font-semibold text-foreground', headingSizes({ size }))}>
+				{titleLink && (
+					<a
+						href={titleLinkHref}
+						className='text-primary'>
+						{titleLink}
+					</a>
+				)}
 				{title}
 			</h1>
 			{description && <p className='text-muted-foreground'>{description}</p>}

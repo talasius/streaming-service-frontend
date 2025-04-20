@@ -57,7 +57,7 @@ export function Hint({
 				) : (
 					<TooltipContent
 						className={cn(
-							'border border-border rounded-xl flex flex-col gap-y-2 w-fit shadow bg-white text-foreground dark:bg-card dark:shadow-black/20 dark:shadow-md',
+							'border border-border rounded-lg flex flex-col gap-y-2 w-fit shadow bg-white text-foreground dark:bg-card dark:shadow-black/20 dark:shadow-md',
 							className
 						)}
 						side={side}

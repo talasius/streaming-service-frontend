@@ -3,10 +3,10 @@ class PAGES_CONFIG {
 	private readonly auth = '/account';
 	private readonly dashboard = '/dashboard';
 	private readonly streams = '/streams';
+	private readonly categories = '/categories';
 
 	//Root routes
 	public HOME = this.home;
-	public CATEGORIES = `${this.home}/categories`;
 
 	//Account routes
 	public ACCOUNT = this.auth;
@@ -25,12 +25,16 @@ class PAGES_CONFIG {
 	public PLANS = `${this.dashboard}/plans`;
 	public TRANSACTIONS = `${this.dashboard}/transactions`;
 
+	//Categories routes
+	public CATEGORIES = this.categories;
+
 	//Stream routes
 	public STREAMS = this.streams;
 
 	public SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL as string;
 	public MEDIA_URL = process.env.NEXT_PUBLIC_MEDIA_URL as string;
+  public LIVEKIT_URL = process.env.NEXT_PUBLIC_LIVEKIT_WS_URL as string;
+
 }
 
 export const PAGES = new PAGES_CONFIG();
-

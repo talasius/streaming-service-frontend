@@ -17,7 +17,7 @@
 						"empty": "You have no new notifications"
 					},
 					"channel": "My channel",
-					"dashboard": "Dashboard",
+					"dashboard": "Settings",
 					"logout": "Sign Out",
 					"successMessage": "You have successfully logged out",
 					"errorMessage": "Error logging out"
@@ -54,6 +54,86 @@
 				"sponsors": "Sponsors",
 				"premium": "Premium plans",
 				"transactions": "Transactions"
+			}
+		}
+	},
+	"home": {
+		"streamsHeadingLink": "Live channels ",
+		"streamsHeading": "we think you’ll like",
+		"categoriesHeadingLink": "Categories ",
+		"categoriesHeading": "we think you’ll like"
+	},
+	"categories": {
+		"heading": "Categories",
+		"overview": {
+			"heading": "Streams in this category"
+		}
+	},
+	"streams": {
+		"heading": "Live streams",
+		"searchHeading": "Search results for"
+	},
+	"stream": {
+		"video": {
+			"offline": {
+				"text": "is offline",
+				"linkText1": "While they are away, you can",
+				"link": "explore",
+				"linkText2": "other channels"
+			},
+			"loading": "Connecting...",
+			"player": {
+				"volume": "Volume",
+				"fullscreen": {
+					"enter": "Enter fullscreen mode",
+					"exit": "Exit fullscreen mode"
+				}
+			}
+		},
+		"info": {
+			"viewers": "viewers",
+			"offline": "offline"
+		},
+		"actions": {
+			"follow": {
+				"followButton": "Follow",
+				"confirmUnfollowHeading": "Stop following ",
+				"confirmUnfollowMessage": "You will no longer receive notifications or see them in your followed channels list.",
+				"unfollowButton": "Unfollow"
+			},
+			"support": {
+				"alreadySponsor": "You are already a sponsor",
+				"supportAuthor": "Support author",
+				"perMonth": "per month",
+				"choose": "Choose",
+				"errorMessage": "Error supporting author"
+			},
+			"share": {
+				"heading": "Share with"
+			}
+		},
+		"aboutChannel": {
+			"heading": "About ",
+			"followersCount": "followers",
+			"noDescription": "It is so quiet here.."
+		},
+		"sponsors": {
+			"heading": "Channel sponsors"
+		},
+		"chat": {
+			"heading": "Chat",
+			"unavailable": "Chat is unavailable",
+			"unavailableMessage": "Chat is unavailable while the channel is not live. Please check back later.",
+			"loading": "Connecting...",
+			"info": {
+				"authRequired": "Authentication required",
+				"chatDisabled": "Chat is disabled",
+				"followersOnly": "Chat is available only for channel followers",
+				"premiumFollowersOnly": "Chat is available only for channel sponsors"
+			},
+			"sendMessage": {
+				"placeholder": "Send a message",
+				"emojiPlaceholder": "Search"
 			}
 		}
 	},
@@ -480,6 +560,10 @@
 		},
 		"dataTable": {
 			"empty": "No results"
+		},
+		"emptyState": {
+			"heading": "Nothing found",
+			"message": "We searched every corner of our site, but nothing was found for your request. Maybe try something else?"
 		}
 	},
 	"utils": {

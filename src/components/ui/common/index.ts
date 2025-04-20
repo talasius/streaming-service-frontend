@@ -13,9 +13,10 @@ export * from './popover.tsx';
 export * from './select.tsx';
 export * from './separator.tsx';
 export * from './skeleton.tsx';
+export * from './slider.tsx';
 export * from './switch.tsx';
+export * from './table.tsx';
 export * from './tabs.tsx';
 export * from './textarea.tsx';
 export * from './tooltip.tsx';
-export * from './table.tsx'
 

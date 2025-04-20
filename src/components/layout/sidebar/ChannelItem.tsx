@@ -68,7 +68,7 @@ export function ChannelItem({ channel }: Props) {
 								className={cn(!channel.stream.isLive && 'opacity-30')}
 							/>
 							<div className='flex flex-col'>
-								<div className='flex gap-x-1.5 items-center'>
+								<div className='inline-flex gap-x-1.5 items-center'>
 									<h2
 										className={cn(
 											'truncate pl-1',

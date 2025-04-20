@@ -9,7 +9,7 @@ export function LogoImage() {
 			xmlSpace='preserve'
 			width={42}
 			height={42}>
-			<title>Logo</title>
+			<title>Witch</title>
 			<g>
 				<polygon
 					className='fill-white'
